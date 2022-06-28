@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>3D MOT</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="3D Multi-Object Tracking with Differentiable Pose Estimation">
+    	<meta name="keywords" content="Indoor Tracking, 3D Multi-Object Tracking, Indoor 3D Multi-Object, Differentiable Pose Estimation, 3D MOT">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+					<h1><strong> 3D Multi-Object Tracking with Differentiable Pose Estimation</strong></h1>
+					<div id="authors">
+						<a href="https://www.linkedin.com/in/dominik-schmauser-775932195/" target="_blank">Dominik Schmauser</a>
+						<a href="https://www.linkedin.com/in/zeju-qiu-729b8018a/" target="_blank">Zeju Qiu</a>
+						<a href="https://niessnerlab.org/members/norman_mueller/profile.html" target="_blank">Norman Müller</a>
+						<a href="https://niessnerlab.org/members/matthias_niessner/profile.html" target="_blank">Matthias Nießner</a>
+					</div>
+					<h4><i>Technical University of Munich</i></h4>
+					<div id="linkbtns">
+						<a href="domischmauser.github.io/static/3D_MOT_with_differentiable_pose_estimation.pdf" target="_blank" class="button"><span class="icon light alt fa-file-pdf"></span>Paper</a>
+						<a href="https://github.com/DomiSchmauser" target="_blank" class="button"><i class="ai ai-arxiv"></i>arXiv</a>
+						<a href="https://www.youtube.com/watch?v=DwYdXuDhU-k" target="_blank" class="button"><i class="icon light brands alt fa-youtube"></i>Video</a>
+						<a href="https://github.com/DomiSchmauser" target="_blank" class="button"><i class="icon light brands alt fa-github"></i>Code (soon)</a>
+					</div>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container xmedium">
+						<span class="image fit"><img src="images/Teaser.png" alt="" /></span>
+						<p>Our network leverages a 2D detection backbone with additional NOC prediction and 3D
+							reconstruction heads to predict per-object dense correspondences maps and 7-DoF pose parameters.
+							We leverage those correspondences in our neural message passing based, fully end-to-end learnable
+							network to model dependencies between objects over time for consistent multi-object tracking.</p>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2">
+				<div class="container">
+							<header class="major">
+								<h2>Abstract</h2>
+							</header>
+							<p>We propose a novel approach for joint 3D multi-object tracking and reconstruction from RGB-D sequences in indoor environments.
+								To this end, we detect and reconstruct objects in each frame while predicting dense correspondences mappings into a normalized object space.<br> We leverage those correspondences to inform a graph neural network to solve for the optimal, temporally-consistent 7-DoF pose trajectories of all objects.<br>
+								The novelty of our method is two-fold:
+								first, we propose a new graph-based approach for differentiable pose estimation over time to learn optimal pose trajectories;
+								second, we present a joint formulation of reconstruction and pose estimation along the time axis for robust and geometrically consistent multi-object tracking.
+								<br>In order to validate our approach, we introduce a new synthetic dataset comprising 2381 unique indoor sequences with a total of 60k rendered RGB-D images for multi-object tracking with moving objects and camera positions derived from the synthetic 3D-FRONT dataset.
+								<br>We demonstrate that our method improves the accumulated MOTA score for all test sequences by 24.8% over existing state-of-the-art methods. In several ablations on synthetic and real-world sequences, we show that our graph-based, fully end-to-end-learnable approach yields a significant boost in tracking performance.</p>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="main style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>Video</h2>
+					</header>
+					<iframe width="896" height="504"
+					src="https://www.youtube.com/embed/DwYdXuDhU-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+					</iframe>
+				</div>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="main style2 special">
+				<div class="container">
+					<header class="major">
+						<h2>MOTFront - Synthetic Indoor MOT Dataset</h2>
+					</header>
+					<p>MOTFront provides photo-realistic RGB-D images with their corresponding instance segmentation masks, class labels, 2D & 3D bounding boxes, 3D geometry, 3D poses and camera parameters. 
+						The MOTFront dataset comprises 2,381 unique sequences with a total of 60,000 images.</p>
+					<ul class="actions special">
+						<li><a href="https://tiny.cc/MOTFront" class="button wide " target="_blank">Download</a></li>
+					</ul>
+				</div>
+			</section>
+
+
+		<!-- Five -->
+		<section id="five" class="main style1 special">
+			<div class="container">
+				<header class="major">
+					<h2>BibTeX</h2>
+				</header>
+				<pre><code>@TBD</code></pre>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+			<section id="footer">
+				<h4>Contact<h4>
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/dominik-schmauser-775932195/" class="icon brands alt fa-linkedin" target="_blank"><span class="label">Twitter</span></a></li>
+					<li><a href="https://github.com/DomiSchmauser" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:domi.schm@googlemail.com" target="_blank" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
